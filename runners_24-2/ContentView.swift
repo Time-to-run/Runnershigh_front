@@ -32,6 +32,13 @@ struct ContentView: View {
                     Text("미션")
                 }
                 .tag(3)
+            
+            MyWebview(urlToLoad: "http://localhost:3000/")
+                .tabItem {
+                    Image(systemName: "list.bullet.clipboard")
+                    Text("미션")
+                }
+                .tag(4)
         }
         .accentColor(.accentColor) // 탭 선택 색상 설정
     }
