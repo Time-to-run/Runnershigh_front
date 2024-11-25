@@ -5,20 +5,19 @@ struct ContentView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            RankingView() // 홈 화면
+            MyWebview(urlToLoad: "https://runnershigh-web.vercel.app/ranking") // 홈 화면
                 .tabItem {
                     Image(systemName: "trophy")
                     Text("랭킹")
                 }
                 .tag(0)
             
-            CommunityView() // 같이뛰기 페이지
+            MyWebview(urlToLoad: "https://runnershigh-web.vercel.app/") // 같이뛰기 페이지
                 .tabItem {
                     Image(systemName: "person.3.fill")
                     Text("같이뛰기")
                 }
                 .tag(1)
-            
             RunMapView() // 지도페이지
                 .tabItem {
                     Image(systemName: "figure.run")
@@ -26,19 +25,14 @@ struct ContentView: View {
                 }
                 .tag(2)
             
-            MissionView() // 미션리스트
+            MyWebview(urlToLoad: "https://runnershigh-web.vercel.app/mission") // 미션리스트
                 .tabItem {
                     Image(systemName: "list.bullet.clipboard")
                     Text("미션")
                 }
                 .tag(3)
             
-            MyWebview(urlToLoad: "http://localhost:3000/")
-                .tabItem {
-                    Image(systemName: "list.bullet.clipboard")
-                    Text("미션")
-                }
-                .tag(4)
+
         }
         .accentColor(.accentColor) // 탭 선택 색상 설정
     }
