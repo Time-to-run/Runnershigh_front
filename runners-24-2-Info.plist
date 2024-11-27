@@ -2,11 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>이 앱은 사용자 위치를 사용하여 지도 서비스를 제공합니다.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>이 앱은 항상 사용자 위치를 사용하여 위치 기반 서비스를 제공합니다.</string>
 	<key>NaverMapClientID</key>
 	<string>egugv1onne</string>
+	<key>UILaunchScreen</key>
+	<dict/>
 </dict>
 </plist>
