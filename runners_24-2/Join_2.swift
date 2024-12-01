@@ -3,7 +3,7 @@ import SwiftUI
 struct Join2: View {
   var body: some View {
     ZStack() {
-        Group {
+        //Group {
             Text("Confirm Password")
                 .font(Font.custom("Inria Sans", size: 23))
                 .foregroundColor(Color(red: 1, green: 0.32, blue: 0.16))
@@ -55,7 +55,7 @@ struct Join2: View {
                 .offset(x: 0, y: -97.50)
                 .opacity(0.52)
             
-            NavigationLink(destination: MyWebview(urlToLoad: "https://www.naver.com")) {
+            NavigationLink(destination: MyWebview(urlToLoad: "https://www.naver.com", token: "token")) {
                 ZStack {
                     Rectangle()
                         .foregroundColor(.clear)
@@ -78,7 +78,7 @@ struct Join2: View {
                 .offset(y: 269) // 오프셋은 외부에서 설정
             }
 
-        }
+        //}
         Group {
         Text("It’s time to\nRun !")
           .font(Font.custom("Partial Sans KR", size: 51))
