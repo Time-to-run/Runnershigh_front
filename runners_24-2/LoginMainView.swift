@@ -313,18 +313,13 @@ struct Login: View {
                 return
             }
             
-            /*if let data = data {
-                if let json = try? JSONSerialization.jsonObject(with: data, options: []),
-                   let responseDict = json as? [String: Any],
-                   let receivedToken = responseDict["token"] as? String {
-                    DispatchQueue.main.async {
-                        self.token = receivedToken
-                        print("Token received: \(receivedToken)")
+            if let httpResponse = response as? HTTPURLResponse {
+                        // 응답 상태 코드 출력
+                        print("HTTP Status Code: \(httpResponse.statusCode)")
+                        
+                        // 응답 헤더 출력
+                        print("Response Headers: \(httpResponse.allHeaderFields)")
                     }
-                } else {
-                    print("Invalid JSON response")
-                }
-            }*/
             
             if let data = data {
                 if let token = String(data: data, encoding: .utf8) {
