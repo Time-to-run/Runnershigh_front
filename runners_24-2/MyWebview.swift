@@ -9,9 +9,6 @@
 import SwiftUI
 import WebKit
 
-// uikit 의 uiview 를 사용할수 있도록 한다.
-// UIViewControllerRepresentable
-
 struct MyWebview: UIViewRepresentable {
    
     var urlToLoad: String
@@ -47,3 +44,5 @@ struct MyWebview_Previews: PreviewProvider {
         MyWebview(urlToLoad: "https://www.naver.com")
     }
 }
+
+
