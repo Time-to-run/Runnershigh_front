@@ -86,9 +86,11 @@ struct RunMapView: View {
     private func startSoloRun() {
         toggleStopwatch()
         routeCoordinates = [
-            NMGLatLng(lat: 35.141612152574226, lng: 129.03352576835152),//시작점
-            NMGLatLng(lat: 35.14424218715414, lng: 129.0344657897943),//경유지
-            NMGLatLng(lat: 35.15037900574702, lng: 129.03923512382765)//도착지
+            NMGLatLng(lat: 35.14474, lng: 129.0357),//시작점
+            NMGLatLng(lat: 35.14399, lng: 129.0356),//경유지
+            NMGLatLng(lat: 35.14403, lng: 129.0344),
+            NMGLatLng(lat: 35.14564, lng: 129.0344),
+            NMGLatLng(lat: 35.15343, lng: 129.0325)//도착지
         ]
     }
 
@@ -253,7 +255,7 @@ struct NaverMapView: UIViewRepresentable {
         self.mapView = mapView
 
         // 초기 위치 설정
-        let initialPosition = NMGLatLng(lat: 35.141612152574226, lng: 129.03352576835152)
+        let initialPosition = NMGLatLng(lat: 35.14474, lng: 129.0357)
         let cameraPosition = NMFCameraPosition(initialPosition, zoom: 15)
         mapView.moveCamera(NMFCameraUpdate(position: cameraPosition))
 
